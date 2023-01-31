@@ -10,31 +10,35 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    
+
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <title>iFienix</title>
   </head>
   <body>
     <header>
+      <div class=" hero-img">
+        <img src="img/hero_img.png" alt="Hero Img" />
+      </div>
+      <div class=" menu-mobil  fa-solid fa-bars"></div>
       <div class="container">
+        
+        
+        
         <nav>
           <div class="logo"><a href="#">iFienix</a></div>
           <ul>
             <li><a href="#">Home page</a></li>
-            <li><a href="#">Our services</a></li>
+            <li><a href="#our_services">Our services</a></li>
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#contact_Us">Contact Us</a></li>
+            <li class="close_menu"><i class="fa-solid fa-xmark"></i></li>
           </ul>
         </nav>
-      </div>
-      <div class="hero-section">
-        <div class="even-col hero-img">
-          <img src="img/hero-img.png" alt="" srcset="" />
-        </div>
-        <div class="even-col hero-text">
+        <div class="hero-text">
           <h1>
-            The World’s <span style="color: #d66643">Fastest</span> Platform App
+            The World’s <span style="color: #d66643">Fastest</span> Platform
+            App
           </h1>
           <p>
             Lorem ipsum dolor sit amet consectetur. Vitae mauris et vitae sed
@@ -44,9 +48,15 @@
           <button>Learn More</button>
         </div>
       </div>
+
+        
+          
+
+      
+      
     </header>
     <main>
-      <section class="our-works">
+      <section id="our_services" class="our-works">
         <div class="container">
           <h2 class="head-color font-jav">Take a Look on Our Work</h2>
           <div class="our-work">
@@ -89,9 +99,9 @@
         <div class="container">
           <div class="figma-img even-col">
             <img src="img/figma.png" alt="" srcset="" />
-            <img src="img/Figmaa.png" alt="" srcset="">
-            <img src="img/Figmaa.png" alt="" srcset="">
-            <img src="img/Figmaa.png" alt="" srcset="">
+            <img src="img/Figmaa.png" alt="" srcset="" />
+            <img src="img/Figmaa.png" alt="" srcset="" />
+            <img src="img/Figmaa.png" alt="" srcset="" />
             <small class="font-jav head-color">Figma</small>
           </div>
           <div class="figma-text even-col">
@@ -157,44 +167,42 @@
         </div>
       </section>
       <section class="marketting">
-        <img src="img/call.png" alt="" />
-        <img src="img/facebook.png" alt="" />
-        <img src="img/global.png" alt="" />
-        <img
-          src="img/insta.png"
-          alt=""
-        /><img src="img/like.png" alt="" />
-        <img src="img/lines.png" alt="" />
-        <img src="img/love100.png" alt="" />
-        <img
-          src="img/share.png"
-          alt=""
-        /><img src="img/target.png" alt="" />
-        <img src="img/twitt.png" alt="" />
-        <img src="img/whats.png" alt="" />
-        <div class="market">
-          <h2 class="head-color font-jav">Marketting</h2>
-          <p class="text-color">
-            On our designs we are using the most recent version of Figma, it's
-            known as the most efficient in the design world, that's why we
-            guarantee high quality with modern designs made only for you
-          </p>
-          <button class="head-color">Learn More</button>
+        <div class="container">
+          <img class="d-in-mob" src="img/call.png" alt="" />
+          <img class="d-in-mob" src="img/facebook.png" alt="" />
+          <img class="d-in-mob" src="img/global.png" alt="" />
+          <img class="d-in-mob" src="img/insta.png" alt="" />
+          <img class="d-in-mob" src="img/like.png" alt="" />
+          <img class="d-in-mob" src="img/lines.png" alt="" />
+          <img class="d-in-mob" src="img/love100.png" alt="" />
+          <img class="d-in-mob" src="img/share.png" alt="" />
+          <img class="d-in-mob" src="img/target.png" alt="" />
+          <img class="d-in-mob" src="img/twitt.png" alt="" />
+          <img class="d-in-mob" src="img/whats.png" alt="" />
+          <div class="market">
+            <h2 class="head-color font-jav">Marketting</h2>
+            <p class="text-color">
+              On our designs we are using the most recent version of Figma, it's
+              known as the most efficient in the design world, that's why we
+              guarantee high quality with modern designs made only for you
+            </p>
+            <button class="head-color">Learn More</button>
+          </div>
         </div>
       </section>
-      <section class="contact-us">
-        <img src="img/contact.png" alt="">
+      <section id="contact_Us" class="contact-us">
+        <img src="img/contact.png" alt="" />
         <div class="container">
           <div class="contact">
             <h2 class="head-color font-jav">Get in Touch</h2>
             <form action="#">
               <div class="group-form">
                 <label class="text-color" for="">Name</label>
-                <input type="text">
+                <input type="text" />
               </div>
               <div class="group-form">
                 <label class="text-color" for="">Email</label>
-                <input type="email">
+                <input type="email" />
               </div>
               <div class="group-form">
                 <label class="text-color" for="">Message</label>
@@ -210,35 +218,44 @@
             </div>
           </div>
         </div>
-
       </section>
     </main>
     <footer>
       <div class="container">
         <div class="ifieniex">
           <h3 class="head-color">iFienix</h3>
-          <p class="text-color">On our designs we are using the most recent version of Figma, it's known as the most efficient in the design world. </p>
+          <p class="text-color">
+            On our designs we are using the most recent version of Figma, it's
+            known as the most efficient in the design world.
+          </p>
         </div>
         <div class="navigation">
-          <h3 class="head-color font-jav ">Navigation</h3>
+          <h3 class="head-color font-jav">Navigation</h3>
           <nav>
             <ul>
-              <li><a  class="text-color"href="#">Home page</a></li>
-              <li><a  class="text-color"href="#">Our services</a></li>
-              <li><a  class="text-color"href="#">About Us</a></li>
-              <li><a  class="text-color"href="#">Contact Us</a></li>
+              <li><a class="text-color" href="#">Home page</a></li>
+              <li><a class="text-color" href="#">Our services</a></li>
+              <li><a class="text-color" href="#">About Us</a></li>
+              <li><a class="text-color" href="#">Contact Us</a></li>
             </ul>
           </nav>
         </div>
-        <div class="contact-us">
-          <h3 class="head-color font-jav ">Contact Us</h3>
+        <div class="contact__us">
+          <h3 class="head-color font-jav">Contact Us</h3>
           <ul>
-            <li class="text-color"><i class="fa-solid fa-phone"></i>5533846720</li>
-            <li class="text-color"><i class="fa-regular fa-envelope"></i>iFienix@gmail.com</li>
-            <li class="text-color"><i class="fa-solid fa-location-dot"></i>Turkey / Gaziantep</li>
+            <li class="text-color">
+              <i class="fa-solid fa-phone"></i>5533846720
+            </li>
+            <li class="text-color">
+              <i class="fa-regular fa-envelope"></i>iFienix@gmail.com
+            </li>
+            <li class="text-color">
+              <i class="fa-solid fa-location-dot"></i>Turkey / Gaziantep
+            </li>
           </ul>
         </div>
       </div>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
