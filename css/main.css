@@ -129,68 +129,57 @@ header .container nav{
 header .container nav ul{
     display: flex;
     gap: 3rem;
+}
+header .container nav ul li{
     position: relative;
     z-index: 1;
 }
-
-/* header .container nav ul li::before{
-    content: "";
+.active-link{
     width: 60px;
     height: 60px;
-    left: 25px;
-    top: -11px;;
-    
-    background: #CC5E3B;
-    position: absolute;
     display: block;
     border-radius: 50%;
-    z-index: -1;
-    transition: .2s ease-in-out;
-} */
-header .container nav ul li a::before{
-    content: "";
-    width: 60px;
-    height: 60px;
-    left: 25px;
-    top: -11px;;
-    
-    background: #CC5E3B;
     position: absolute;
-    display: block;
-    border-radius: 50%;
+    top: -15px;
+    right: 8px;
     z-index: -1;
-    transition: .2s ease-in-out;
+    background-color: #CC5E3B;
     opacity: 0;
+    transition: .3s;
 }
-header .container nav ul li a:hover:before{
+.link.active-link{
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    right: 8px;
+    z-index: -1;
+    background-color: #CC5E3B;
     opacity: 1;
+    transition: .3s;
 }
+header .container nav ul li:hover .active-link{
+    opacity: 1;
+    cursor: pointer;
+}
+
 header .container nav a{
     color: #DDDDDD;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 1.3vw, 1.2rem);
     transition: .2s all ease-in-out;
     display: block;
 
 }
-/* header .container nav a:hover{
-    color:#CC5E3B;
-} */
 
-/* header .container nav ul li:first-child:hover::before{
-    background: #1b262b;
-} */
 
 header .hero-section .even-col{
     flex-basis: 100%;
 }
 
-/* header .container,
-header .hero-text{
-    position: relative;
-    z-index: 2;
-} */
 header .hero-text {
     color: #DDDDDD;
     font-size: 1.5rem;
@@ -272,7 +261,8 @@ header .hero-text p{
 .figma img{
     display: block;
     margin: auto;
-    width: 350px;
+    border-radius: 14px;
+    /* width: 350px; */
 }
 .figma-img {
     position: relative;
@@ -283,6 +273,7 @@ header .hero-text p{
     position: absolute;
     left: -4px;
     top: -160px;
+    z-index: -1;
 }
 .figma-img img:nth-child(3){
     position: absolute;
@@ -343,9 +334,11 @@ header .hero-text p{
 .our-projects .project-img-right{
     align-self: center;
     border-radius: 13px;
-    overflow: hidden;
     text-align: center;
 }
+/* .our-projects .project-img-right img{
+    width: 100%;
+} */
 .our-projects .project-img-right .head-color{
     margin-top: 5em;
 }
@@ -371,8 +364,11 @@ header .hero-text p{
 
 }
 .Programming .prog-text h2{ 
+    align-self: center;
+    font-style: normal;
     font-weight: 400;
     font-size: 2rem;
+    line-height: 73px;
     letter-spacing: 0.01em;
 }
 .Programming .prog-text p{
@@ -429,7 +425,6 @@ header .hero-text p{
     position: absolute;
     top: 56px;
     right: -45px;
-    background-color: red;
     border-radius: 31px;
     background: #E78945;
     z-index: -1;
@@ -443,9 +438,12 @@ header .hero-text p{
 /* start business-cards */
 .business-cards{
     position: relative;
+    height: 100vh;
 }
 .business-cards img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .business-cards .card-text{
@@ -558,11 +556,126 @@ header .hero-text p{
     transform:  translate(-11rem, 3rem);
     width: 70px
 }
-/* .marketting img{
-    width: 100px;
-    height: 100px;
-} */
 /* end marketting */
+
+/* start about-us */
+.about-us{
+    display: grid;
+    text-align: center;
+}
+.about-us > *{
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+}
+.about-us > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.about-us-content{
+    padding-block: 3em;
+}
+.about-us .about-cont-header{
+    margin-bottom: 3rem;
+}
+.about-us .about-cont-header h3{
+    font-family: 'Javanese Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 73px;
+    letter-spacing: 0.01em;
+    color: #DDDDDD;
+}
+.about-us .about-cont-header p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 173.5%;
+    letter-spacing: 0.04em;
+    color: #A7A4A4;
+}
+.about-us-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+
+    gap: 4rem 0;
+}
+.about-us .about-cont-body{
+    width: 302px;
+    height: 279px;
+    background: #E78945;
+    border-radius: 20px;
+}
+.about-us .card-about-us{
+    padding: 1rem;
+}
+.about-us .card-about-us .card-img{
+    margin-bottom: 1rem;
+}
+.about-us .card-content p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 173.5%;
+    text-align: left;
+    letter-spacing: 0.04em;
+    padding-inline: 1rem;
+    color: #fff;
+}
+
+/* end about-us */
+
+/* start next-levet */
+.next-level-content{
+    max-width: 1240px;
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: 15rem 1fr 15rem;
+    align-items: center;
+    margin: auto;
+    padding-block: 4rem;
+    padding-inline: 2rem;
+}
+
+.next-level-content .text h3{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 173.5%;
+    text-align: center;
+    letter-spacing: 0.04em;   
+    color: #DDDDDD;
+    margin-bottom: 2rem;
+    
+}
+
+.next-level-content .text p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 173.5%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    max-width: 31rem;
+    color: #A7A4A4;
+    margin: auto;
+}
+.next-level-content .img-right{
+    margin: auto;
+}
+.next-level-content .img-left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.next-level-content .img-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* end next-levet */
 
 /* start contact-us */
 .contact-us{
@@ -619,9 +732,9 @@ color: #DDDDDD;
     margin-top: 2.5em;
 }
 .contact-us .social a {
-color: #C7C7C7;
-font-size: 1.5rem;
-padding-right: .8em;
+    color: #C7C7C7;
+    font-size: 1.5rem;
+    padding-right: .8em;
 }
 /* end contact-us */
 
@@ -751,7 +864,7 @@ footer .contact__us li i{
 .menu-mobil{
     position: absolute;
     top: 27px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: right;
     display: block;
     cursor: pointer;
@@ -760,8 +873,10 @@ footer .contact__us li i{
 .close_menu{
     font-size: 1.5rem;
     position: absolute;
+    z-index: 10;
     top: 20px;
     right: 30px;
+    font-size: 2.5rem;
     cursor: pointer;
     display: none;
 }
@@ -778,19 +893,123 @@ footer .contact__us li i{
 
 
 
-/* // Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) { 
-   
- }
+
 
 /* // Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) { 
     header .hero-text h1{
-        font-size: 2.8rem;
+        font-size: calc(.5rem + 2.7vw);
+    }
+    .project-img-right img {
+        width: 100%;
+    }
+    .our-projects .project-img-left{
+        width: 800px;
+        position: relative;
+        top: -60px;
+    }
+    .next-level-content .img-right img{
+        /* display: none; */
     }
  }
- /* 
-// Small devices (landscape phones, less than 768px) */
+
+ @media (max-width: 1023.98px){
+    .next-level-content .img-right img{
+        display: none;
+    }
+    .next-level-content{
+        grid-template-columns: 35% 1fr;
+    }
+ }
+ /* // Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 992px) { 
+    header .hero-text h1{
+        font-size: calc(.5rem + 2.7vw);
+    }
+    .our-works .work .work-img {
+        width: calc(7rem + 5vw);
+        height: calc(7rem + 5vw);
+
+    }
+    .our-works .work small{
+        margin-top: 1em;
+        margin-bottom: 3em;
+        
+    }
+    .figma {
+        padding-top: 6em;
+        margin-bottom: 5em;
+    }
+    .our-projects .project-img-right{
+        align-self: center;
+    }
+    /* .our-projects .project-img-right img{
+        width: 100%;
+    } */
+    .figma-img img:nth-child(2) {
+        top: -200px;
+    }
+    .figma-img img:nth-child(3) {
+        top: -73px;
+        right: -135px;
+
+    }
+    .our-projects .project-img-right .head-color {
+        margin-top: 2em;
+    }
+    .project-img-right img {
+        width: 100%;
+    }
+    .our-projects .project-img-left{
+        width: 800px;
+        position: relative;
+        top: -80px;
+    }
+    .Programming .prog-text {
+        max-width: 75%;
+        transform: translate(-50%, -65%);
+        width: 546px;
+    }
+    .business-cards .card-text p{
+        width: 88%;
+    }
+    .marketting .market{
+        width: 100%;
+    }
+    /* .next-level-content{
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .next-level-content .text{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+    .next-level-content .img-left{
+        grid-column: 1/2;
+    }
+    .next-level-content .img-right{
+        grid-column: 3/-1;
+    }
+    */
+    .next-level-content .img-right img{
+        display: none;
+    } 
+    .contact-us .contact{
+        top: 5%;
+    }
+    footer .navigation h3,
+    footer .contact__us h3{
+        font-size: 1.7rem;
+    }
+    footer .ifieniex::after,
+    footer .navigation::after{
+        display: none;
+    }
+    footer .ifieniex p{
+        width: 80%;
+    }
+}
+
+ /*Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
     .menu-mobil{
         display: block;
@@ -812,7 +1031,10 @@ footer .contact__us li i{
     }
     header .hero-text{
         width: 100%;
-        margin-top: 6em;
+        margin-top: 8em;
+    }
+    header .hero-text h1 {
+        font-size: calc(.5rem + 5.7vw);
     }
     header .hero-text p{
         width: 100%;
@@ -821,7 +1043,7 @@ footer .contact__us li i{
     nav .logo{
         position: absolute;
         top: 0;
-        left: 0;
+        left: -30px;
     }
     header .container nav ul{
         flex-direction: column;
@@ -848,7 +1070,7 @@ footer .contact__us li i{
         color: #d66643;
         background-color: #1A313E;
     }
-    header .container nav ul li a::before{
+    header .container nav ul li .link{
         display: none;
     }
     .our-works h2{
@@ -860,15 +1082,20 @@ footer .contact__us li i{
     .our-works .our-work > * {
         justify-content: space-around;
     }
+    .our-works .work .work-img {
+        width: calc(10rem + 5vw);
+        height: calc(10rem + 5vw);
+    }
     .our-works .work small{
         margin-top: 1em;
+        
     }
     .figma {
         padding-top: 10em;
         margin-bottom: 5em;
     }
     .figma .container{
-        gap: 2rem;
+        gap: 4rem;
     }
     .figma-img,
     .figma-text{
@@ -878,28 +1105,30 @@ footer .contact__us li i{
     .figma-img img{
         width: 100%;
     }
-    
+
     .figma-text p {
-        /* font-size: .95rem; */
-        font-size: calc(.5rem + 1vw);
+        font-size: .95rem;
+        /* font-size: calc(.5rem + 1vw); */
     }
     .our-projects{
         flex-direction: column;
-        gap: 10em;
+        gap: 5em;
     }
     .our-projects .project-img-right {
         align-self: end;
         width: 100%;
     }
     .our-projects .project-img-right img{
-        width: 100%;
+        width: 80%;
     }
     .our-projects .project-img-right .head-color {
         margin-top: 2em;
     }
     .our-projects .project-img-left{
-        width: 100%;
+        width: 90%;
+        margin: auto;
     }
+
     /* .our-projects .project-img-left img:nth-child(1):hover{
         scale: 2;
         z-index: 1;
@@ -918,13 +1147,13 @@ footer .contact__us li i{
         transform: translate(-50%, -50%);
         width: 90%;
     }
-
+/* 
     .Programming .prog-text h2 {
         font-size: calc(.5rem + 4vw);
     }
     .Programming .prog-text p{
         font-size: 0.86rem;
-    }
+    } */
     .blog{
         height: unset;
     }
@@ -959,6 +1188,34 @@ footer .contact__us li i{
     }
     .marketting .market{
         width: 100%;
+    }
+    .about-us .about-cont-body{
+        width: 261px;
+    }
+    .about-us .card-about-us{
+        padding: .5rem 0 0 0;
+    }
+    
+    .about-us-card{
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        gap: 1rem;
+    }
+    .contact-us .contact{
+        top: 5%;
+    }
+    .next-level-content{
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .next-level-content .text{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+    .next-level-content .img-left{
+        grid-column: 1/-1;
+        margin: 1rem auto;
+    }
+    .next-level-content .img-right{
+        grid-column: 3/-1;
     }
     footer .container {
         flex-wrap: wrap;
@@ -1018,13 +1275,14 @@ footer .contact__us li i{
     }
     .our-works .work .work-img{
         margin: auto;
+
     }
     .our-works .our-work > *{
         justify-content: center;
     }
     .our-works .work small{
         margin-top: 1em;
-        margin-bottom: 4em;
+        margin-bottom: 1em;
     }
     .figma{
         padding-top: 7em;
@@ -1062,13 +1320,16 @@ footer .contact__us li i{
     }
     .our-projects{
         flex-wrap: wrap;
+        flex-direction: unset;
     }
     .our-projects .project-img-left{
         flex-direction: column;
-        width: 100%;
+        width: 600px;
+        margin-top: 5em;
     }
     .our-projects .project-img-left img{
         width: 100%;
+        max-width: 350px;
         transform: unset;
     }
     .Programming {
@@ -1138,6 +1399,13 @@ footer .contact__us li i{
         transform: none;
         width: 100%;
     }
+    .next-level-content{
+        padding-inline: 1rem;
+    }
+    .about-us .about-cont-body{
+        margin: auto;
+    }
+   
     .contact-us{
         display: grid;
     }
@@ -1160,7 +1428,9 @@ footer .contact__us li i{
     footer .contact__us{
         width: 100%;
         margin-bottom: 2em;
-        text-align: center;
+    }
+    footer .ifieniex h3{
+        margin-bottom: 1rem;
     }
     footer .ifieniex p{
         width: 100%;
@@ -1176,14 +1446,17 @@ footer .contact__us li i{
         display: none;
     }
     footer .navigation{
-        margin-top: 2em;
+        /* margin-top: 2em; */
     }
     /* footer .navigation::after{
         right: 133px;
 
     } */
     footer .contact__us{
-        margin-top: 2em;
+        /* margin-top: 2em; */
+    }
+    .contact-us .social a{
+        font-size: 2rem;
     }
     /* footer .contact__us::before{
         right: 107px;
