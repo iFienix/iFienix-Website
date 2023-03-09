@@ -54,6 +54,9 @@ button:hover{
 .even-col{
     width: 100%;
 }
+.ifieniex{
+    color: #d66643
+}
 /* End general rule */
 
 
@@ -126,6 +129,9 @@ header .container nav{
     justify-content: space-around;
     margin-top: 1.85em;
 }
+.logo{
+    width: 120px;
+}
 header .container nav ul{
     display: flex;
     gap: 3rem;
@@ -133,8 +139,9 @@ header .container nav ul{
 header .container nav ul li{
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
-.active-link{
+.link{
     width: 60px;
     height: 60px;
     display: block;
@@ -145,7 +152,10 @@ header .container nav ul li{
     z-index: -1;
     background-color: #CC5E3B;
     opacity: 0;
-    transition: .3s;
+    transition: .5s all ease-in-out;
+}
+header .container nav ul li:hover .link{
+    opacity: 1;
 }
 .link.active-link{
     width: 60px;
@@ -160,10 +170,10 @@ header .container nav ul li{
     opacity: 1;
     transition: .3s;
 }
-header .container nav ul li:hover .active-link{
+/* header .container nav ul li:hover .active-link{
     opacity: 1;
     cursor: pointer;
-}
+} */
 
 header .container nav a{
     color: #DDDDDD;
@@ -214,6 +224,10 @@ header .hero-text p{
     padding-block: 5em;
     background: linear-gradient(180deg, rgba(30, 50, 60, 0.43) 0%, rgba(30, 42, 46, 0.43) 64.37%, rgba(28, 37, 43, 0) 100%);
 }
+.our-works p{
+    width: 69%;
+    line-height: 2;
+}
 .our-works .our-work > *{
     display: flex;
     justify-content: space-between;
@@ -231,8 +245,8 @@ header .hero-text p{
     background: linear-gradient(180deg, #D66643 0%, #673F32 100%);
     box-shadow: 0px 0px 12px rgb(0 0 0 / 70%);
     border-radius: 50%;
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     display: grid;
     place-content: center;
 }
@@ -289,6 +303,7 @@ header .hero-text p{
 }
 .figma small{
     font-size: 2rem;
+    text-shadow: 0px 21px 13px rgba(191, 191, 191, 0.45);
 }
 .figma-text{
     align-self: flex-start;
@@ -358,7 +373,7 @@ header .hero-text p{
     width: 43%;
     top: 50%;
     left: 50%;
-    transform: translate(-15%, -65%);
+    transform: translate(-20%, -50%);
     text-align: center;
     max-width: 580px;
 
@@ -376,10 +391,31 @@ header .hero-text p{
     font-weight: 400;
     font-size: 18px;
     line-height: 173.5%;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 
-    text-align: center;
+    text-align: left;
     letter-spacing: 0.04em;
+}
+.programming-list{
+    text-align: left;
+
+}
+.programming-list h3{
+    margin-bottom: .5rem;
+    font-weight: normal;
+}
+.programming-list ul {
+    margin-left: 1rem;
+    line-height: 1.87rem;
+    margin-bottom: 3rem;
+}
+.programming-list ul li::before{
+    content: "\2022";
+    color: #d66643;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -.7rem;
+    scale: 2;
 }
 /* end programming */
 
@@ -387,7 +423,7 @@ header .hero-text p{
 .blog{
     padding-top: 5em;
     padding-bottom: 5em;
-    height: 100vh;
+    /* height: 100vh; */
 }
 .blog .container{
     display: flex;
@@ -416,6 +452,7 @@ header .hero-text p{
 }
 .blog .blog-right{
     position: relative;
+    align-self: start;
 }
 .blog .blog-right::before{
     content: '';
@@ -477,6 +514,7 @@ header .hero-text p{
 .marketting{
     position: relative;
     padding-block: 5em;
+    margin-bottom: 7rem;
     background: rgb(29 28 28);
     height: 100vh;
 
@@ -598,11 +636,10 @@ header .hero-text p{
 .about-us-card{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-
-    gap: 4rem 0;
+    gap: 4rem;
 }
 .about-us .about-cont-body{
-    width: 302px;
+    /* width: 302px; */
     height: 279px;
     background: #E78945;
     border-radius: 20px;
@@ -869,7 +906,9 @@ footer .contact__us li i{
     display: block;
     cursor: pointer;
     display: none;
+    transition: all .5s ease;
 }
+
 .close_menu{
     font-size: 1.5rem;
     position: absolute;
@@ -923,6 +962,12 @@ footer .contact__us li i{
  }
  /* // Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 992px) { 
+    header .container nav ul{
+        gap: 1rem;
+    }
+    .logo{
+        width: 100px;
+    }
     header .hero-text h1{
         font-size: calc(.5rem + 2.7vw);
     }
@@ -965,9 +1010,13 @@ footer .contact__us li i{
         position: relative;
         top: -80px;
     }
+    .blog .blog-left p{
+        width: 100%;
+        padding-inline:1rem;
+    }
     .Programming .prog-text {
         max-width: 75%;
-        transform: translate(-50%, -65%);
+        transform: translate(-50%, -50%);
         width: 546px;
     }
     .business-cards .card-text p{
@@ -976,20 +1025,6 @@ footer .contact__us li i{
     .marketting .market{
         width: 100%;
     }
-    /* .next-level-content{
-        grid-template-rows: repeat(2, 1fr);
-    }
-    .next-level-content .text{
-        grid-column: 1/-1;
-        grid-row: 1/2;
-    }
-    .next-level-content .img-left{
-        grid-column: 1/2;
-    }
-    .next-level-content .img-right{
-        grid-column: 3/-1;
-    }
-    */
     .next-level-content .img-right img{
         display: none;
     } 
@@ -1017,7 +1052,7 @@ footer .contact__us li i{
         right: 30px;
         z-index: 1;
     }
-    
+
     .close_menu{
         right: 36px;
         display: block;
@@ -1031,7 +1066,7 @@ footer .contact__us li i{
     }
     header .hero-text{
         width: 100%;
-        margin-top: 8em;
+        /* margin-top: 8em; */
     }
     header .hero-text h1 {
         font-size: calc(.5rem + 5.7vw);
@@ -1043,8 +1078,11 @@ footer .contact__us li i{
     nav .logo{
         position: absolute;
         top: 0;
-        left: -30px;
+        left: -25px;
+        width: 180px;
+
     }
+ 
     header .container nav ul{
         flex-direction: column;
         background: darkslategrey;
@@ -1066,6 +1104,7 @@ footer .contact__us li i{
     header .container nav a{
         padding: 2rem;
     }
+     /* hover on mobile */
     header .container nav a:hover{
         color: #d66643;
         background-color: #1A313E;
@@ -1074,6 +1113,10 @@ footer .contact__us li i{
         display: none;
     }
     .our-works h2{
+        text-align: center;
+    }
+    .our-works p{
+        width: 100%;
         text-align: center;
     }
     .our-works .work {
@@ -1286,6 +1329,7 @@ footer .contact__us li i{
     }
     .figma{
         padding-top: 7em;
+        margin-bottom: 12em;
     }
     .figma .container{
         flex-wrap: wrap;
@@ -1321,6 +1365,7 @@ footer .contact__us li i{
     .our-projects{
         flex-wrap: wrap;
         flex-direction: unset;
+        gap: 0;
     }
     .our-projects .project-img-left{
         flex-direction: column;
@@ -1345,6 +1390,7 @@ footer .contact__us li i{
     }
     .blog{
         height: unset;
+        margin-bottom: 7em;
     }
     .blog .container{
         display: flex;

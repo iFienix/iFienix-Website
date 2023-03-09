@@ -98,7 +98,7 @@ button:hover{
 .menu-mobil{
     position: absolute;
     top: 27px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: right;
     display: block;
     cursor: pointer;
@@ -123,6 +123,10 @@ header{
     /* height: 100vh; */
     margin-bottom: 5rem;
 }
+.logo{
+    width: 120px;
+}
+
 header .hero-img{
     height: 100vh;
     height: 100dvh;
@@ -148,7 +152,7 @@ header .container nav ul li{
 }
 
 
-.active-link{
+.link{
     width: 60px;
     height: 60px;
     display: block;
@@ -159,11 +163,23 @@ header .container nav ul li{
     z-index: -1;
     background-color: #CC5E3B;
     opacity: 0;
-    transition: .3s;
+    transition: .5s all ease-in-out;
 }
-header .container nav ul li:hover .active-link{
+header .container nav ul li:hover .link{
     opacity: 1;
-    cursor: pointer;
+}
+.link.active-link{
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    right: 8px;
+    z-index: -1;
+    background-color: #CC5E3B;
+    opacity: 1;
+    transition: .3s;
 }
 header .container nav a{
     color: #DDDDDD;
@@ -438,6 +454,12 @@ footer .contact__us li i{
 }
 /* end  footer */
 
+ /* // Medium devices (tablets, less than 992px) */
+ @media (min-width: 768px) and (max-width: 992px) { 
+    header .container nav ul{
+        gap: 1rem;
+    }
+ }
 
  /*Small devices (landscape phones, less than 768px) */
  @media (max-width: 767.98px) { 
@@ -474,6 +496,10 @@ footer .contact__us li i{
         position: absolute;
         top: 0;
         left: 0;
+        width: 180px;
+    }
+    nav .logo:hover a{
+        background-color:transparent;
     }
 
     header .container nav ul{
@@ -500,6 +526,9 @@ footer .contact__us li i{
     header .container nav a:hover{
         color: #d66643;
         background-color: #1A313E;
+    }
+    header .container nav .logo a:hover{
+        background-color: transparent;
     }
     header .container nav ul li .link{
         display: none;
