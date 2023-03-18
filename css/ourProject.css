@@ -339,19 +339,19 @@ footer .container{
     display: flex;
     justify-content: space-between;
 }
-footer .ifieniex{
+footer .ifienix{
     width: 50%;
     position: relative;
     height: 100%;
 
 }
-footer .ifieniex h3 {
+footer .ifienix h3 {
     font-weight: 400;
     font-size: 2rem;
     color: #D66643;
     margin-bottom: 1.5em;
 }
-footer .ifieniex p{
+footer .ifienix p{
     width: 60%;
     font-weight: 400;
     font-size: 1rem;
@@ -360,7 +360,7 @@ footer .ifieniex p{
     letter-spacing: 0.04em;
 
 }
-footer .ifieniex::after{
+footer .ifienix::after{
     content: "";
     width: 2px;
     height: 80px;
@@ -538,13 +538,13 @@ footer .contact__us li i{
         justify-content: space-evenly;
         gap: 2rem;
     }
-    footer .ifieniex {
+    footer .ifienix {
         width: 100%;
     }
-    footer .ifieniex::after{
+    footer .ifienix::after{
         display: none;
     }
-    footer .ifieniex p{
+    footer .ifienix p{
         width: 100%;
     }
     footer .navigation,
@@ -595,16 +595,16 @@ footer .contact__us li i{
     footer .container{
         flex-direction: column;
     }
-    footer .ifieniex,
+    footer .ifienix,
     footer .navigation,
     footer .contact__us{
         width: 100%;
         margin-bottom: 2em;
     }
-    footer .ifieniex p{
+    footer .ifienix p{
         width: 100%;
     }
-    footer .ifieniex::after,
+    footer .ifienix::after,
     footer .navigation::after{
         transform: rotate(90deg);
         top: unset;
