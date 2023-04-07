@@ -1,162 +1,242 @@
-@extends("frontend.layout.master")
-<main>
-  <section id="our_services" class="our-works">
-    <div class="container">
-      <h2 class="head-color font-jav">Our Services</h2>
-      <p class="text-color">Discover how <span class="ifieniex">IFieniex</span> can help your business succeed with our range of expert services, from web design and marketing to branding and visual identity.</p>
-      <div class="our-work">
-        <div>
-          <div class="work">
-            <a href="#design">
-              <div class="work-img">
-                  <img src="img/web-design.svg" alt="" srcset="" />
-              </div>
-              <small class="text-color">Web Designing </small>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5HJGVXX');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Let us as iFienix group take your business to the next step and help your business succeed with our range of expert services, from web design and marketing to branding and visual identity." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./img/Favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>iFienix Technologies</title>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HJGVXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <header>
+      <div class=" hero-img">
+        <img src="img/hero_img.png" alt="Hero Img" />
+      </div>
+      <div class=" menu-mobil  fa-solid fa-bars"></div>
+      
+      <div class="container">
+        <nav>
+          
+          <div class="logo">
+            <a href="#">
+              <img src="img/ifienixAsset.svg" alt="">
             </a>
           </div>
-          <div class="work">
-            <a href="#progrmming">
-            <div class="work-img">
-
-                <img src="img/work-3.png" alt="" srcset="" />
-
-            </div>
-            <small class="text-color">Web Progrmming</small>
-          </a>
-          </div>
-
-          <div class="work">
-            <a href="#blogs">
-            <div class="work-img">
-
-                <img src="img/blogs.svg" alt="" srcset="" />
-
-            </div>
-            <small class="text-color">Writing Blogs</small>
-          </a>
-          </div>
-          <div class="work">
-            <a href="#visual">
-            <div class="work-img">
-
-                <img src="img/visualidentityicon.svg" alt="" srcset="" />
-
-            </div>
-            <small class="text-color">Visual Identity</small>
-          </a>
-          </div>
-
-
-          <div class="work">
-            <a href="#markting">
-            <div class="work-img">
-
-                <img src="img/web-markting.svg" alt="" srcset="" />
-
-            </div>
-            <small class="text-color">Web Marketing</small>
-          </a>
-          </div>
+          <ul>
+            <span class="close_menu"><i class="fa-solid fa-xmark"></i></span>
+            <li>
+              <span class="link active-link"></span>
+              <a href="index.html">Home page</a>
+            </li>
+            <li>
+              <span class="link"></span>
+              <a href="ourProjects.html">Our Projects</a>
+            </li>
+            <li>
+              <span class="link"></span>
+              <a href="#our_services">Our services</a></li>
+            <li>
+              <span class="link"></span>
+              <a href="#about-us">About Us</a></li>
+            <li>
+              <span class="link"></span>
+              <a href="#contact_Us">Contact Us</a></li>
+            
+          </ul>
+        </nav>
+        <div class="hero-text">
+          <h1>
+            The World’s <span class="ifienix">Fastest</span> Platform
+            App
+          </h1>
+          <p>
+            Discover the power of digital marketing and web design with <span class="ifienix">ifienix</span>, where we combine creativity, technology, and strategy to help your business succeed.
+          </p>
+          <!-- <button>Learn More</button> -->
         </div>
       </div>
-    </div>
-  </section>
-  <section class="figma" id="design">
-    <div class="container">
-      <div class="figma-img even-col">
-        <img src="img/figma.png" alt="" srcset="" />
-        <img src="img/Figmaa.png" alt="" srcset="" />
-        <img src="img/Figmaa.png" alt="" srcset="" />
-        <img src="img/Figmaa.png" alt="" srcset="" />
-        <small class="font-jav head-color">Figma</small>
-      </div>
-      <div class="figma-text even-col" >
-        <h3 class="font-jav head-color">Web Designing</h3>
-        <p class="text-color">
-          On our designs we are using the most recent version of Figma, it's known as the most efficient in the design world, that's why we guarantee high quality with modern designs made only for you
-        </p>
-        <button class="head-color">Learn More</button>
-      </div>
-    </div>
-    <div class="our-projects">
-      <div class="project-img-left">
-        <img class="pro-1" src="img/flower-site.svg" alt="" />
-        <img class="pro-2" src="img/istwird.svg" alt="" />
-        <img class="pro-3" src="img/istwird2.svg" alt="" />
-      </div>
-      <div class="project-img-right">
-        <img src="img/labtop.svg" alt="" srcset="" />
-        <button class="head-color">See all</button>
-      </div>
-    </div>
-  </section>
-  <section class="Programming" id="progrmming">
-    <img src="img/programming.png" alt="" srcset="" />
-    <div class="prog-text">
-      <h2 class="head-color font-jav">Web Programming</h2>
-      <p class="text-color">
-        At <span class="ifieniex">IFieniex</span>, we create custom web applications using the latest programming languages and frameworks. Our team follows agile development methodologies and delivers high-quality, well-documented code that is scalable and secure.
-      </p>
-      <div class="programming-list text-color">
-        <h3>Languages and Frameworks:</h3>
-        <ul>
-          <li>HTML5, CSS3, JavaScript</li>
-          <li>PHP, Python, Ruby</li>
-          <li>React, Angular, Vue, Node.js</li>
-        </ul>
-      </div>
-      <button class="head-color">Learn More</button>
-    </div>
-  </section>
-  <section class="blog" id="blogs">
-    <div class="container">
-      <div class="blog-left even-col">
-        <h2 class="font-jav head-color">Writing Blogs</h2>
-        <p class="text-color">
-          At <span class="ifieniex">IFieniex</span>, we specialize in creating engaging blog content that attracts and engages potential customers, builds brand awareness, and drives conversions. Our team of experienced writers follows best practices for blog writing, such as structuring posts for readability, optimizing headlines and visuals, and incorporating keywords for SEO.
-          </p>
+    </header>
+    <main>
+      <section id="our_services" class="our-works">
+        <div class="container">
+          <h2 class="head-color font-jav">Our Services</h2>
+          <p class="text-color">Discover how <span class="ifienix">ifienix</span> can help your business succeed with our range of expert services, from web design and marketing to branding and visual identity.</p>
+          <div class="our-work">
+            <div>
+              <div class="work">
+                <a href="#design">
+                  <div class="work-img">                 
+                      <img src="img/web-design.svg" alt="" srcset="" />                
+                  </div>
+                  <small class="text-color">Web Designing </small>
+                </a>
+              </div>
+              <div class="work">
+                <a href="#progrmming">
+                <div class="work-img">
+
+                    <img src="img/work-3.png" alt="" srcset="" />
+
+                </div>
+                <small class="text-color">Web Progrmming</small>
+              </a>
+              </div>
+              
+              <div class="work">
+                <a href="#blogs">
+                <div class="work-img">
+
+                    <img src="img/blogs.svg" alt="" srcset="" />
+
+                </div>
+                <small class="text-color">Writing Blogs</small>
+              </a>
+              </div>
+              <div class="work">
+                <a href="#visual">
+                <div class="work-img">
+
+                    <img src="img/visualidentityicon.svg" alt="" srcset="" />
+
+                </div>
+                <small class="text-color">Visual Identity</small>
+              </a>
+              </div>
+
+
+              <div class="work">
+                <a href="#markting">
+                <div class="work-img">
+
+                    <img src="img/web-markting.svg" alt="" srcset="" />
+
+                </div>
+                <small class="text-color">Web Marketing</small>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="figma" id="design">
+        <div class="container">
+          <div class="figma-img even-col">
+            <img src="img/figma.png" alt="" srcset="" />
+            <img src="img/Figmaa.png" alt="" srcset="" />
+            <img src="img/Figmaa.png" alt="" srcset="" />
+            <img src="img/Figmaa.png" alt="" srcset="" />
+            <small class="font-jav head-color">Figma</small>
+          </div>
+          <div class="figma-text even-col" >
+            <h3 class="font-jav head-color">Web Designing</h3>
+            <p class="text-color">
+              On our designs we are using the most recent version of Figma, it's known as the most efficient in the design world, that's why we guarantee high quality with modern designs made only for you 
+            </p>
+            <!-- <button class="head-color">Learn More</button> -->
+          </div>
+        </div>
+        <div class="our-projects">
+          <div class="project-img-left">
+            <img class="pro-1" src="img/flower-site.svg" alt="" />
+            <img class="pro-2" src="img/istwird.svg" alt="" />
+            <img class="pro-3" src="img/istwird2.svg" alt="" />
+          </div>
+          <div class="project-img-right">
+            <img src="img/labtop.svg" alt="" srcset="" />
+            <button class="head-color">See all</button>
+          </div>
+        </div>
+      </section>
+      <section class="Programming" id="progrmming">
+        <img src="img/programming.png" alt="" srcset="" />
+        <div class="prog-text">
+          <h2 class="head-color font-jav">Web Programming</h2>
           <p class="text-color">
-          Whether you're launching a new blog, improving an existing one, <span class="ifieniex">IFieniex</span> can help. Contact us today to learn more about our blog writing services.
-        </p>
-        <button class="head-color">Learn More</button>
-      </div>
-      <div class="blog-right even-col">
-        <img src="img/blog.png" alt="" srcset="" />
-      </div>
-    </div>
-  </section>
-  <section class="business-cards" id="visual">
-    <img src="img/cards.png" alt="" srcset="" />
-    <div class="card-text">
-      <h2 class="head-color font-jav">Visual Identity</h2>
-      <p class="text-color">
-        At <span class="ifieniex">IFieniex</span>, we specialize in designing eye-catching logos, business cards, and brochures that help businesses establish a strong brand identity. We work closely with clients to understand their unique needs and develop designs that reflect their values and resonate with their target audience. Contact us today to learn how we can help your business stand out from the competition.
-      </p>
-      <button class="head-color">Learn More</button>
-    </div>
-  </section>
-  <section class="marketting" id="markting">
-    <div class="container">
-      <img class="d-in-mob" src="img/call.png" alt="" />
-      <img class="d-in-mob" src="img/facebook.png" alt="" />
-      <img class="d-in-mob" src="img/global.png" alt="" />
-      <img class="d-in-mob" src="img/insta.png" alt="" />
-      <img class="d-in-mob" src="img/like.png" alt="" />
-      <img class="d-in-mob" src="img/lines.png" alt="" />
-      <img class="d-in-mob" src="img/love100.png" alt="" />
-      <img class="d-in-mob" src="img/share.png" alt="" />
-      <img class="d-in-mob" src="img/target.png" alt="" />
-      <img class="d-in-mob" src="img/twitt.png" alt="" />
-      <img class="d-in-mob" src="img/whats.png" alt="" />
-      <div class="market">
-        <h2 class="head-color font-jav">Marketting</h2>
-        <p class="text-color">
-          Our marketing services are designed to help businesses of all sizes connect with their target audience and achieve their marketing goals. From developing a comprehensive marketing strategy to executing targeted campaigns, we offer a range of services to help our clients succeed.
-        </p>
-        <button class="head-color">Learn More</button>
-      </div>
-    </div>
-  </section>
+            At <span class="ifienix">ifienix</span>, we create custom web applications using the latest programming languages and frameworks. Our team follows agile development methodologies and delivers high-quality, well-documented code that is scalable and secure.
+          </p>
+          <div class="programming-list text-color">
+            <h3>Languages and Frameworks:</h3>
+            <ul>
+              <li>HTML5, CSS3, JavaScript</li>
+              <li>PHP, Python, Ruby</li>
+              <li>React, Angular, Vue, Node.js</li>
+            </ul>
+          </div>
+          <!-- <button class="head-color">Learn More</button> -->
+        </div>
+      </section>
+      <section class="blog" id="blogs">
+        <div class="container">
+          <div class="blog-left even-col">
+            <h2 class="font-jav head-color">Writing Blogs</h2>
+            <p class="text-color">
+              At <span class="ifienix">ifienix</span>, we specialize in creating engaging blog content that attracts and engages potential customers, builds brand awareness, and drives conversions. Our team of experienced writers follows best practices for blog writing, such as structuring posts for readability, optimizing headlines and visuals, and incorporating keywords for SEO.
+              </p>
+              <p class="text-color">
+              Whether you're launching a new blog, improving an existing one, <span class="ifienix">ifienix</span> can help. Contact us today to learn more about our blog writing services.
+            </p>
+            <!-- <button class="head-color">Learn More</button> -->
+          </div>
+          <div class="blog-right even-col">
+            <img src="img/blog.png" alt="" srcset="" />
+          </div>
+        </div>
+      </section>
+      <section class="business-cards" id="visual">
+        <img src="img/cards.png" alt="" srcset="" />
+        <div class="card-text">
+          <h2 class="head-color font-jav">Visual Identity</h2>
+          <p class="text-color">
+            At <span class="ifienix">ifienix</span>, we specialize in designing eye-catching logos, business cards, and brochures that help businesses establish a strong brand identity. We work closely with clients to understand their unique needs and develop designs that reflect their values and resonate with their target audience. Contact us today to learn how we can help your business stand out from the competition.
+          </p>
+          <!-- <button class="head-color">Learn More</button> -->
+        </div>
+      </section>
+      <section class="marketting" id="markting">
+        <div class="container">
+          <img class="d-in-mob" src="img/call.png" alt="" />
+          <img class="d-in-mob" src="img/facebook.png" alt="" />
+          <img class="d-in-mob" src="img/global.png" alt="" />
+          <img class="d-in-mob" src="img/insta.png" alt="" />
+          <img class="d-in-mob" src="img/like.png" alt="" />
+          <img class="d-in-mob" src="img/lines.png" alt="" />
+          <img class="d-in-mob" src="img/love100.png" alt="" />
+          <img class="d-in-mob" src="img/share.png" alt="" />
+          <img class="d-in-mob" src="img/target.png" alt="" />
+          <img class="d-in-mob" src="img/twitt.png" alt="" />
+          <img class="d-in-mob" src="img/whats.png" alt="" />
+          <div class="market">
+            <h2 class="head-color font-jav">Marketting</h2>
+            <p class="text-color">
+              Our marketing services are designed to help businesses of all sizes connect with their target audience and achieve their marketing goals. From developing a comprehensive marketing strategy to executing targeted campaigns, we offer a range of services to help our clients succeed.
+            </p>
+            <!-- <button class="head-color">Learn More</button> -->
+          </div>
+        </div>
+      </section>
 
   <section class="about-us" id="about-us">
     <img src="img/about-us.png" alt="">
@@ -249,21 +329,42 @@
             <label class="text-color" for="">Name</label>
             <input type="text" />
           </div>
-          <div class="group-form">
-            <label class="text-color" for="">Email</label>
-            <input type="email" />
-          </div>
-          <div class="group-form">
-            <label class="text-color" for="">Message</label>
-            <textarea></textarea>
-          </div>
-          <button type="submit" class="head-color">Contact Us</button>
-        </form>
-        <div class="social">
-          <a href=""><i class="fa-brands fa fa-whatsapp"></i></a>
-          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-          <a href=""><i class="fa-brands fa-instagram"></i></a>
-          <a href=""><i class="fa-brands fa-telegram"></i></a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="ifienix">
+          <h3 class="head-color">iFienix</h3>
+          <p class="text-color">
+            On our designs we are using the most recent version of Figma, it's
+            known as the most efficient in the design world.
+          </p>
+        </div>
+        <div class="navigation">
+          <h3 class="head-color font-jav">Navigation</h3>
+          <nav>
+            <ul>
+              <li><a class="text-color" href="#">Home page</a></li>
+              <li><a class="text-color" href="#">Our services</a></li>
+              <li><a class="text-color" href="#">About Us</a></li>
+              <li><a class="text-color" href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="contact__us">
+          <h3 class="head-color font-jav">Contact Us</h3>
+          <ul>
+            <li class="text-color">
+              <i class="fa-solid fa-phone"></i>5533846720
+            </li>
+            <li class="text-color">
+              <i class="fa-regular fa-envelope"></i>iFienix@gmail.com
+            </li>
+            <li class="text-color">
+              <i class="fa-solid fa-location-dot"></i>Turkey / Gaziantep
+            </li>
+          </ul>
         </div>
       </div>
     </div>
