@@ -1,4 +1,11 @@
 @extends("frontend.layout.master")
+
+@section('hero')
+    @include('frontend.layout.includes.hero')
+@stop
+
+@section('content')
+
 <main>
   <section id="our_services" class="our-works">
     <div class="container">
@@ -9,7 +16,7 @@
           <div class="work">
             <a href="#design">
               <div class="work-img">
-                  <img src="img/web-design.svg" alt="" srcset="" />
+                <img src="{{ asset('assets/images/web-design.svg')}}" alt="" srcset="" />
               </div>
               <small class="text-color">Web Designing </small>
             </a>
@@ -18,7 +25,7 @@
             <a href="#progrmming">
             <div class="work-img">
 
-                <img src="img/work-3.png" alt="" srcset="" />
+                <img src="{{asset('assets/images/work-3.png')}}" alt="" srcset="" />
 
             </div>
             <small class="text-color">Web Progrmming</small>
@@ -28,9 +35,7 @@
           <div class="work">
             <a href="#blogs">
             <div class="work-img">
-
-                <img src="img/blogs.svg" alt="" srcset="" />
-
+                <img src="{{ asset('assets/images/blogs.svg')}}" alt="" srcset="" />
             </div>
             <small class="text-color">Writing Blogs</small>
           </a>
@@ -39,7 +44,7 @@
             <a href="#visual">
             <div class="work-img">
 
-                <img src="img/visualidentityicon.svg" alt="" srcset="" />
+                <img src="{{ asset('assets/images/visualidentityicon.svg')}}" alt="" srcset="" />
 
             </div>
             <small class="text-color">Visual Identity</small>
@@ -51,7 +56,7 @@
             <a href="#markting">
             <div class="work-img">
 
-                <img src="img/web-markting.svg" alt="" srcset="" />
+                <img src="{{ asset('assets/images/web-markting.svg')}}" alt="" srcset="" />
 
             </div>
             <small class="text-color">Web Marketing</small>
@@ -64,10 +69,10 @@
   <section class="figma" id="design">
     <div class="container">
       <div class="figma-img even-col">
-        <img src="img/figma.png" alt="" srcset="" />
-        <img src="img/Figmaa.png" alt="" srcset="" />
-        <img src="img/Figmaa.png" alt="" srcset="" />
-        <img src="img/Figmaa.png" alt="" srcset="" />
+        <img src="{{ asset('assets/images/figma.png') }}" alt="" srcset="" />
+        <img src="{{ asset('assets/images/figmaa.png')}}" alt="" srcset="" />
+        <img src="{{ asset('assets/images/figmaa.png')}}" alt="" srcset="" />
+        <img src="{{ asset('assets/images/figmaa.png')}}" alt="" srcset="" />
         <small class="font-jav head-color">Figma</small>
       </div>
       <div class="figma-text even-col" >
@@ -80,18 +85,18 @@
     </div>
     <div class="our-projects">
       <div class="project-img-left">
-        <img class="pro-1" src="img/flower-site.svg" alt="" />
-        <img class="pro-2" src="img/istwird.svg" alt="" />
-        <img class="pro-3" src="img/istwird2.svg" alt="" />
+        <img class="pro-1" src="{{ asset('assets/images/flower-site.svg')}}" alt="" />
+        <img class="pro-2" src="{{ asset('assets/images/istwird.svg')}}" alt="" />
+        <img class="pro-3" src="{{ asset('assets/images/istwird2.svg')}}" alt="" />
       </div>
       <div class="project-img-right">
-        <img src="img/labtop.svg" alt="" srcset="" />
+        <img src="{{asset('assets/images/labtop.svg')}}" alt="" srcset="" />
         <button class="head-color">See all</button>
       </div>
     </div>
   </section>
   <section class="Programming" id="progrmming">
-    <img src="img/programming.png" alt="" srcset="" />
+    <img src="{{ asset('assets/images/programming.png')}}" alt="" srcset="" />
     <div class="prog-text">
       <h2 class="head-color font-jav">Web Programming</h2>
       <p class="text-color">
@@ -121,12 +126,12 @@
         <button class="head-color">Learn More</button>
       </div>
       <div class="blog-right even-col">
-        <img src="img/blog.png" alt="" srcset="" />
+        <img src="{{ asset('assets/images/blog.png')}}" alt="" srcset="" />
       </div>
     </div>
   </section>
   <section class="business-cards" id="visual">
-    <img src="img/cards.png" alt="" srcset="" />
+    <img src="{{ asset('assets/images/cards.png')}}" alt="" srcset="" />
     <div class="card-text">
       <h2 class="head-color font-jav">Visual Identity</h2>
       <p class="text-color">
@@ -137,17 +142,17 @@
   </section>
   <section class="marketting" id="markting">
     <div class="container">
-      <img class="d-in-mob" src="img/call.png" alt="" />
-      <img class="d-in-mob" src="img/facebook.png" alt="" />
-      <img class="d-in-mob" src="img/global.png" alt="" />
-      <img class="d-in-mob" src="img/insta.png" alt="" />
-      <img class="d-in-mob" src="img/like.png" alt="" />
-      <img class="d-in-mob" src="img/lines.png" alt="" />
-      <img class="d-in-mob" src="img/love100.png" alt="" />
-      <img class="d-in-mob" src="img/share.png" alt="" />
-      <img class="d-in-mob" src="img/target.png" alt="" />
-      <img class="d-in-mob" src="img/twitt.png" alt="" />
-      <img class="d-in-mob" src="img/whats.png" alt="" />
+      <img class="d-in-mob" src="{{ asset('assets/images/call.png')}}" alt="" />
+      <img class="d-in-mob" src="{{ asset('assets/images/facebook.png')}}" alt="" />
+      <img class="d-in-mob" src="{{ asset('assets/images/global.png')}}" alt="" />
+      <img class="d-in-mob" src="{{ asset('assets/images/insta.png')}}" alt="" />
+      <img class="d-in-mob" src="{{ asset('assets/images/like.png')}}" alt="" />
+      <img class="d-in-mob" src="{{ asset('assets/images/lines.png')}}" alt="" />
+      <img class="d-in-mob" src="{{ asset('assets/images/love100.png')}}" alt="" />
+      <img class="d-in-mob" src="{{ asset('assets/images/share.png')}}" alt="" />
+      <img class="d-in-mob" src="{{ asset('assets/images/target.png')}}" alt="" />
+      <img class="d-in-mob" src="{{ asset('assets/images/twitt.png')}}" alt="" />
+      <img class="d-in-mob" src="{{ asset('assets/images/whats.png')}}" alt="" />
       <div class="market">
         <h2 class="head-color font-jav">Marketting</h2>
         <p class="text-color">
@@ -159,7 +164,7 @@
   </section>
 
   <section class="about-us" id="about-us">
-    <img src="img/about-us.png" alt="">
+    <img src="{{ asset('assets/images/about-us.png')}}" alt="">
     <div class="container">
       <div class="about-us-content">
         <div class="about-cont-header">
@@ -170,7 +175,7 @@
           <div class="about-cont-body">
             <div class="card-about-us">
               <div class="card-img">
-                <img src="img/team.svg" alt="team">
+                <img src="{{ asset('assets/images/team.svg')}}" alt="team">
               </div>
               <div class="card-content">
                 <p>Our experienced team includes talented web designers, skilled developers, and marketing experts.</p>
@@ -180,7 +185,7 @@
           <div class="about-cont-body">
             <div class="card-about-us">
               <div class="card-img">
-                <img src="img/new-computer.svg" alt="team">
+                <img src="{{ asset('assets/images/new-computer.svg')}}" alt="team">
               </div>
               <div class="card-content">
                 <p>Our team specializes in creating custom websites, innovative solutions, and effective marketing strategies.</p>
@@ -190,7 +195,7 @@
           <div class="about-cont-body">
             <div class="card-about-us">
               <div class="card-img">
-                <img src="img/clipboard.svg" alt="team">
+                <img src="{{ asset('assets/images/clipboard.svg')}}" alt="team">
               </div>
               <div class="card-content">
                 <p>Our personalized approach begins with a thorough consultation to understand your unique needs and goals.</p>
@@ -200,7 +205,7 @@
           <div class="about-cont-body">
             <div class="card-about-us">
               <div class="card-img">
-                <img src="img/planner.svg" alt="team">
+                <img src="{{ asset('assets/images/clipboard.svg')}}" alt="team">
               </div>
               <div class="card-content">
                 <p>We develop a custom plan tailored to your specific requirements..</p>
@@ -210,7 +215,7 @@
           <div class="about-cont-body">
             <div class="card-about-us">
               <div class="card-img">
-                <img src="img/happy.svg" alt="team">
+                <img src="{{ asset('assets/images/happy.svg')}}" alt="team">
               </div>
               <div class="card-content">
                 <p>We're passionate about delivering exceptional results that exceed your expectations.</p>
@@ -227,20 +232,20 @@
   <section class="next-level">
     <div class="next-level-content">
       <div class="img-left">
-        <img src="img/next-level-img-left.svg" alt="contect-us">
+        <img src="{{ asset('assets/images/next-level-img-left.svg')}}" alt="contect-us">
       </div>
       <div class="text">
         <h3>Ready to take your business to the next level? </h3>
         <p>Contact us today to schedule a consultation and learn how we can help you achieve your digital objectives</p>
       </div>
       <div class="img-right">
-        <img src="img/next-level-img-right.svg" alt="social-media">
+        <img src="{{ asset('assets/images/next-level-img-right.svg')}}" alt="social-media">
       </div>
     </div>
   </section>
 
   <section id="contact_Us" class="contact-us">
-    <img src="img/contact.png" alt="" />
+    <img src="{{ asset('assets/images/contact.png')}}" alt="" />
     <div class="container">
       <div class="contact">
         <h2 class="head-color font-jav">Get in Touch</h2>
@@ -269,3 +274,5 @@
     </div>
   </section>
 </main>
+
+@stop
